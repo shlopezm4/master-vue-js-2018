@@ -45,7 +45,8 @@
                 <div class="col-md-6 offset-md-3">
                     <input v-model="amount" type="text" class="my-5 form-control" placeholder="Amount to convert ...">
                     <div class="text-center">
-                        <button @click="convertCurrency()" class="btn btn-lg btn-primary">Convert</button>
+                        <button :disabled="disabled" @click="convertCurrency()"
+                            class="btn btn-lg btn-primary">Convert</button>
                     </div>
                 </div>
             </div>

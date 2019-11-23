@@ -2,7 +2,7 @@ new Vue({
     el: '#app',
     data: {
         currencies: {},
-        amount: null,
+        amount: 0,
         from: '',
         to: '',
         result: 0
@@ -14,11 +14,15 @@ new Vue({
         this.getCurrencies();
     },
     computed: {
+        // Se refrescarán cuando el dato cambie
         formattedCurrencies() {
             return Object.values(this.currencies);
         },
         calculateResult() {
             return (Number(this.amount) * this.result).toFixed(3);
+        },
+        disabled() {
+            return this.amount === 0;
         }
     },
     methods: {
