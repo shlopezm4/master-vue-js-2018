@@ -46,7 +46,7 @@
                     <input v-model="amount" type="text" class="my-5 form-control" placeholder="Amount to convert ...">
                     <div class="text-center">
                         <button :disabled="disabled" @click="convertCurrency()"
-                            class="btn btn-lg btn-primary">Convert</button>
+                            class="btn btn-lg btn-primary">{{ loading ? 'Converting...' : 'Convert'}}</button>
                     </div>
                 </div>
             </div>
