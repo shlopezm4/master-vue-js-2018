@@ -51,5 +51,15 @@ new Vue({
                     this.result = response.data.results[key].val;
                 });
         }
+    },
+    watch: {
+        // Ven si algún dato cambia (un dropdown, ejemplo)
+        from() {
+            this.result = 0;
+        },
+        to() {
+            this.result = 0;
+        }
+
     }
 })
